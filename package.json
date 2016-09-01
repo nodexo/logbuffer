@@ -1,0 +1,23 @@
+{
+  "name": "logbuffer",
+  "version": "0.1.0",
+  "description": "Buffer log entries in memory, transport them later. Triggered by threshold level or time interval.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nodexo/logbuffer.git"
+  },
+  "keywords": [
+    "log",
+    "buffer"
+  ],
+  "author": "Michael Kortstiege",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/nodexo/logbuffer/issues"
+  },
+  "homepage": "https://github.com/nodexo/logbuffer#readme"
+}
