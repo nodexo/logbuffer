@@ -1,6 +1,6 @@
 {
   "name": "logbuffer",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Buffer log entries in memory, transport them later. Triggered by threshold level or time interval.",
   "main": "index.js",
   "scripts": {
