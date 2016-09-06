@@ -37,10 +37,18 @@ class LogBuffer {
 
   /**
    * Sets the flush timer
+   * @param {Number} ms
    */
-  _setFlushTimer() {
-    if (this._af && this._cb && this._ms) {
-      this._tmr = setTimeout(() => { this.flush(this._cb) }, this._ms);
+  _setFlushTimer(ms) {
+    clearTimeout(this._tmr);
+    if (Number.isInteger(ms) === false) {
+      if (!this._ms) {
+        return;
+      }
+      ms = this._ms;
+    }
+    if (this._af && this._cb) {
+      this._tmr = setTimeout(() => { this.flush(this._cb) }, ms);
     }
   }
 
@@ -62,17 +70,19 @@ class LogBuffer {
 
   /**
     * Adds an entry to the buffer
-    * @param {String} entry
+    * @param {String} or {Object} entry
     */
   add(entry) {
     this._buf[this._pos] = entry;
     this._pos++;
     if (this._pos >= this._cap) {
       if (this._af) {
-        return this.flush(this._cb);
+        this._setFlushTimer(0);
+      } else {
+        this._pos = 0;
       }
-      this._pos = 0;
     }
+    return 'OK';
   }
 
   /**
