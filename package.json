@@ -1,7 +1,7 @@
 {
   "name": "logbuffer",
   "version": "0.1.1",
-  "description": "Buffer log entries in memory, transport them later. Triggered by threshold level or time interval.",
+  "description": "Specialized circular buffer for Node.js high performance logging: It buffers log entries in memory and flushes the data to a callback function later. Triggered by size threshold or time interval.",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
