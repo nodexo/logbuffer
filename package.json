@@ -1,6 +1,6 @@
 {
   "name": "logbuffer",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Specialized circular buffer for Node.js high performance logging: It buffers log entries in memory and flushes the data to a callback function later. Triggered by size threshold or time interval.",
   "main": "index.js",
   "scripts": {
